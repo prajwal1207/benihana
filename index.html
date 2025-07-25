@@ -19,10 +19,10 @@
 
                     <div class="bg-cardBackground shadow-lg rounded-lg overflow-hidden w-full">
 
-                        <div class="relative">
-                            <img src="https://storage.googleapis.com/nyofiles/01JPVR22X5QQTS13385KB50AKA.png"
-                                alt="Background Image" class="w-full h-40 object-cover">
-                            <div class="absolute top-[6.5rem] rtl:right-4 ltr:left-4">
+                        <div class="relative aspect-2-1">
+                            <img src="https://storage.googleapis.com/nyofiles/01JEDE7DK2J2B64SZZHZ1QRK5G.png"
+                                alt="Background Image">
+                            <div class="absolute -bottom-30 left-0 -translate-y-1/2 p-2">
                                 <img src="https://storage.googleapis.com/nyofiles/01HGEMZKFN3G7GAXJPH3BGCS4G.png"
                                     alt="Logo" class="h-[7rem] w-[7rem] rounded-secondaryRadius border-2 border-white">
                             </div>
@@ -2611,6 +2611,17 @@
         overflow-y: auto;
         -webkit-overflow-scrolling: touch;
         height: 100vh;
+    }
+
+    .aspect-2-1 {
+      position: relative;
+      width: 100%;
+      padding-top: 50%; /* 2:1 aspect ratio (height = 50% of width) */
+    }
+    .aspect-2-1 > img {
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
+      object-fit: cover;
     }
 </style>
 <script>
